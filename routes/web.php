@@ -15,6 +15,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('restaurants ', 'RestaurantController')->only([
-    'index', 'show'
+// all public controllers
+Route::resource('restaurants', 'RestaurantController')->only([
+    'index'
 ]);
+Route::resource('restaurant','RestaurantController')->only(['show']);
+
+// admin login
+Route::get('/admin/login', 'Admin\LoginController@showLoginForm')->name('admin.login');
+Route::get('/admin/logout','Admin\LoginController@logout');
+Route::post('/admin/login','Admin\LoginController@login');
+
+// all controllers in Admin, except admin controller
+Route::namespace('Admin')->prefix('admin')->middleware('admin_auth:admin')->group(function() {
+  Route::resource('restaurants','RestaurantController',['as'=>'admin']);
+});
+//->where(array('id'=>'\d+'));
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

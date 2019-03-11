@@ -14,7 +14,7 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-      echo 'test';
+      return view('restaurant.index');
         //
     }
 
@@ -48,7 +48,11 @@ class RestaurantController extends Controller
     public function show(Restaurant $restaurant)
     {
         //
-        echo 'inside show';
+        //echo $restaurant->id;
+        //echo $restaurant->name;
+
+        return view('restaurant.view');
+        //echo 'inside show';
     }
 
     /**

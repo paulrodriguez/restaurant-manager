@@ -16,6 +16,7 @@ class RestaurantController extends Controller
     public function index()
     {
         //
+        echo "test from admin restaurant controller";
     }
 
     /**
