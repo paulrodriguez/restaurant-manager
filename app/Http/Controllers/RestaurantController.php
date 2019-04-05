@@ -51,7 +51,7 @@ class RestaurantController extends Controller
         //echo $restaurant->id;
         //echo $restaurant->name;
 
-        return view('restaurant.view');
+        return view('restaurant.view',['restaurant'=>$restaurant]);
         //echo 'inside show';
     }
 

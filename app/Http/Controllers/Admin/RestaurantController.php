@@ -16,7 +16,7 @@ class RestaurantController extends Controller
     public function index()
     {
         //
-        echo "test from admin restaurant controller";
+        return view('layouts.backend.main.restaurant.index');
     }
 
     /**

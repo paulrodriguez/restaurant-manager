@@ -1,0 +1,29 @@
+%nav {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  position: relative;
+}
+.header {
+  padding-left: $content-padding-left;
+  width:100%;
+  display: inline-block;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+
+  
+  .nav-left {
+    float: left;
+    margin-right: 15px;
+    @extend %nav;
+  }
+
+  .nav-right {
+    float:right;
+    margin-left: 15px;
+    @extend %nav;
+  }
+
+
+}

@@ -11,6 +11,11 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix.react('resources/js/app.js', 'public/js')
+  .react('resources/js/react/App.js','public/js/react')
    .sass('resources/sass/app.scss', 'public/css')
    .sass('resources/sass/custom.scss','public/css');
+
+mix.js('resources/js/backend.js','public/js');
+// backend assets
+mix.sass('resources/sass/backend/app.scss', 'public/css/backend')

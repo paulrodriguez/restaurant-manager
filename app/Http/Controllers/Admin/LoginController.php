@@ -9,11 +9,15 @@ class LoginController extends Controller
 {
   use AuthenticatesUsers;
 
-  protected $redirectTo = '/admin/restaurants';
+  //protected $redirectTo = route('admin.restaurants.index');
 
   public function __construct()
   {
     $this->middleware('admin_guest:admin')->except('logout');
+  }
+
+  protected function redirectTo() {
+    return route('admin.dashboard.index');
   }
 
   protected function guard()
@@ -22,7 +26,6 @@ class LoginController extends Controller
   }
   public function showLoginForm()
   {
-    echo 'in login for amdin';
       return view('auth.admin.login');
   }
 
