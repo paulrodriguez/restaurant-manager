@@ -12,35 +12,36 @@ successfully.
 
 copy the ```env.example``` to ```.env```
 
+install all composer dependencies
 ```
 docker run --rm -v $(pwd):/app composer install
 ```
-install all composer dependencies
-```
 
+build docker containers
+```
 docker-compose build
 ```
-to build docker containers
 
+run application container
 ```
 docker-compose up
 ```
-to run application
 
+generate laravel required key
 ```
 docker-compose exec app php artisan key:generate
 ```
-to generate key
 
+run migrations to generate all tables
 ```
 docker-compose exec app php artisan migrate
 ```
-runs migrations to generate all tables
 
+run seeds to generate sample data
 ```
 docker-compose exec app php artisan db:seed --class=RestaurantTableSeeder
 ```
-run seeds to generate sample data
+
 
 ## creating an admin user
 run the following to create a seeder class
@@ -60,12 +61,12 @@ the method ```run``` in this seeder class should look like this:
 replace everything inside and including the curly braces with your own values.
 this will be the credentials you will use to log in to the admin
 
+dumps old class mappings and generate a new one
 ```
 docker run --rm -v $(pwd):/app composer dump-autoload
 ```
-dumps old class map and generates a new one
 
+run seeder to generate your admin user
 ```
 docker-compose app php artisan db:seed --class=AdminUserSeeder
 ```
-run seeder to generate your admin user
