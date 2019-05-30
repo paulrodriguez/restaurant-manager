@@ -81,83 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/backend.js":
-/*!*********************************!*\
-  !*** ./resources/js/backend.js ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-(function () {
-  function clickHandler() {
-    var classes = document.body.className.split(' ');
-    var idx = classes.indexOf('sidebar-open');
-
-    if (idx >= 0) {
-      classes.splice(idx, 1);
-    } else {
-      classes.push('sidebar-open');
-    }
-
-    document.body.className = classes.join(' ');
-  }
-
-  var toggle = document.getElementById('toggle-sidebar');
-  toggle.attachEvent('onclick', clickHandler);
-  toggle.addEventListener('click', clickHandler, false);
-})();
-
-/***/ }),
-
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/sass/backend/app.scss":
-/*!*****************************************!*\
-  !*** ./resources/sass/backend/app.scss ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/sass/custom.scss":
-/*!************************************!*\
-  !*** ./resources/sass/custom.scss ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 0:
-/*!********************************************************************************************************************************!*\
-  !*** multi ./resources/js/backend.js ./resources/sass/app.scss ./resources/sass/custom.scss ./resources/sass/backend/app.scss ***!
-  \********************************************************************************************************************************/
+/***/ 3:
+/*!*************************************************!*\
+  !*** multi ./resources/js/RestaurantListing.js ***!
+  \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /app/resources/js/backend.js */"./resources/js/backend.js");
-__webpack_require__(/*! /app/resources/sass/app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! /app/resources/sass/custom.scss */"./resources/sass/custom.scss");
-module.exports = __webpack_require__(/*! /app/resources/sass/backend/app.scss */"./resources/sass/backend/app.scss");
+!(function webpackMissingModule() { var e = new Error("Cannot find module '/app/resources/js/RestaurantListing.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
 /***/ })

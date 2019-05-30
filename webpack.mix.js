@@ -17,5 +17,6 @@ mix.react('resources/js/app.js', 'public/js')
    .sass('resources/sass/custom.scss','public/css');
 
 mix.js('resources/js/backend.js','public/js');
+mix.react('resources/js/react/RestaurantListing.js','public/js/react');
 // backend assets
-mix.sass('resources/sass/backend/app.scss', 'public/css/backend')
+mix.sass('resources/sass/backend/app.scss', 'public/css/backend');

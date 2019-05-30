@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -26652,276 +26652,11 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./resources/js/react/App.js":
-/*!***********************************!*\
-  !*** ./resources/js/react/App.js ***!
-  \***********************************/
+/***/ "./resources/js/react/RestaurantListing.js":
+/*!*************************************************!*\
+  !*** ./resources/js/react/RestaurantListing.js ***!
+  \*************************************************/
 /*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _RestaurantView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RestaurantView */ "./resources/js/react/RestaurantView.js");
-function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
-    _typeof = function _typeof(obj) {
-      return _typeof2(obj);
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-  }
-
-  return _typeof(obj);
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return _assertThisInitialized(self);
-}
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) _setPrototypeOf(subClass, superClass);
-}
-
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-
- //import { BrowserRouter, Route, Switch } from 'react-router-dom'
-
-
-
-var App =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(App, _Component);
-
-  function App() {
-    _classCallCheck(this, App);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(App).apply(this, arguments));
-  }
-
-  _createClass(App, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RestaurantView__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        restaurant: this.props.restaurant
-      });
-    }
-  }]);
-
-  return App;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, {
-  restaurant: restaurant
-}), document.getElementById('app'));
-
-/***/ }),
-
-/***/ "./resources/js/react/Rating.js":
-/*!**************************************!*\
-  !*** ./resources/js/react/Rating.js ***!
-  \**************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
-    _typeof = function _typeof(obj) {
-      return _typeof2(obj);
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-  }
-
-  return _typeof(obj);
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return _assertThisInitialized(self);
-}
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) _setPrototypeOf(subClass, superClass);
-}
-
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-
-
-var Rating =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Rating, _Component);
-
-  function Rating(props) {
-    var _this;
-
-    _classCallCheck(this, Rating);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Rating).call(this, props));
-    _this.state = {
-      rating: 0
-    };
-    return _this;
-  }
-
-  _createClass(Rating, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {}
-  }, {
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Rating goes here");
-    }
-  }]);
-
-  return Rating;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Rating);
-
-/***/ }),
-
-/***/ "./resources/js/react/RestaurantView.js":
-/*!**********************************************!*\
-  !*** ./resources/js/react/RestaurantView.js ***!
-  \**********************************************/
-/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -26930,8 +26665,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Rating__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Rating */ "./resources/js/react/Rating.js");
-/* harmony import */ var _ReviewList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ReviewList */ "./resources/js/react/ReviewList.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
 
 function _typeof(obj) {
@@ -27020,414 +26755,120 @@ function _setPrototypeOf(o, p) {
 
 
 
- //import ReactDOM from 'react-dom'
-//import { Link } from 'react-router-dom'
 
-var RestaurantView =
+var RestaurantRow =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(RestaurantView, _Component);
+  _inherits(RestaurantRow, _Component);
 
-  function RestaurantView(props) {
+  function RestaurantRow(props) {
     var _this;
 
-    _classCallCheck(this, RestaurantView);
+    _classCallCheck(this, RestaurantRow);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(RestaurantView).call(this, props));
+    console.log("creating restaurant row");
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(RestaurantRow).call(this, props));
     _this.state = {
-      restaurant: _this.props.restaurant
+      restaurant: props.restaurant
     };
     return _this;
   }
 
-  _createClass(RestaurantView, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {}
-  }, {
-    key: "hasAddress2",
-    value: function hasAddress2(address2) {
-      if (address2 != null && address2 != '') {
-        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "address 2");
-      } else {
-        return null;
-      }
-    }
-  }, {
+  _createClass(RestaurantRow, [{
     key: "render",
     value: function render() {
-      var restaurant = this.state.restaurant; //console.log(restaurant)
-
-      var reviews = [{
-        name: 'Paul',
-        date: '2019-02-01'
-      }, {
-        name: 'Jest',
-        date: '2018-03-14'
-      }];
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "container-fluid"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-        src: "https://via.placeholder.com/965x150",
-        alt: "Main Image"
-      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", null, restaurant.name)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, restaurant.address1), this.hasAddress2(restaurant.address2), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, restaurant.city, ", ", restaurant.state_code, " ", restaurant.postal_code)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Rating__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
-        className: "nav nav-tabs",
-        id: "myTab",
-        role: "tablist"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-        className: "nav-item"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-        className: "nav-link active",
-        id: "menu-tab",
-        "data-toggle": "tab",
-        href: "#menu",
-        role: "tab",
-        "aria-controls": "menu",
-        "aria-selected": "true"
-      }, "Menu")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-        className: "nav-item"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-        className: "nav-link",
-        id: "about-tab",
-        "data-toggle": "tab",
-        href: "#about",
-        role: "tab",
-        "aria-controls": "about",
-        "aria-selected": "false"
-      }, "About")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-        className: "nav-item"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-        className: "nav-link",
-        id: "reviews-tab",
-        "data-toggle": "tab",
-        href: "#reviews",
-        role: "tab",
-        "aria-controls": "reviews",
-        "aria-selected": "false"
-      }, "Reviews"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "tab-content",
-        id: "myTabContent"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "tab-pane fade show active",
-        id: "menu",
-        role: "tabpanel",
-        "aria-labelledby": "menu-tab"
-      }, "Menu Here"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "tab-pane fade",
-        id: "about",
-        role: "tabpanel",
-        "aria-labelledby": "about-tab"
-      }, "About Here"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "tab-pane fade",
-        id: "reviews",
-        role: "tabpanel",
-        "aria-labelledby": "reviews-tab"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ReviewList__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        reviews: reviews
-      }))));
+      }, this.state.restaurant.name);
     }
   }]);
 
-  return RestaurantView;
+  return RestaurantRow;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (RestaurantView);
-
-/***/ }),
-
-/***/ "./resources/js/react/Review.js":
-/*!**************************************!*\
-  !*** ./resources/js/react/Review.js ***!
-  \**************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
-    _typeof = function _typeof(obj) {
-      return _typeof2(obj);
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-  }
-
-  return _typeof(obj);
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return _assertThisInitialized(self);
-}
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) _setPrototypeOf(subClass, superClass);
-}
-
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-
-
-var Review =
+var RestaurantColumns =
 /*#__PURE__*/
-function (_Component) {
-  _inherits(Review, _Component);
+function (_Component2) {
+  _inherits(RestaurantColumns, _Component2);
 
-  function Review(props) {
-    var _this;
+  function RestaurantColumns(props) {
+    var _this2;
 
-    _classCallCheck(this, Review);
+    _classCallCheck(this, RestaurantColumns);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Review).call(this, props));
-    _this.state = {
-      review: _this.props.review
+    _this2 = _possibleConstructorReturn(this, _getPrototypeOf(RestaurantColumns).call(this, props));
+    _this2.state = {
+      columns: []
     };
-    return _this;
+    return _this2;
   }
 
-  _createClass(Review, [{
-    key: "render",
-    value: function render() {
-      var review = this.state.review;
-      console.log(review);
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col"
-      }, review.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-auto"
-      }, review.date));
-    }
-  }]);
+  return RestaurantColumns;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
-  return Review;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Review);
-
-/***/ }),
-
-/***/ "./resources/js/react/ReviewList.js":
-/*!******************************************!*\
-  !*** ./resources/js/react/ReviewList.js ***!
-  \******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Review__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Review */ "./resources/js/react/Review.js");
-function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
-    _typeof = function _typeof(obj) {
-      return _typeof2(obj);
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-  }
-
-  return _typeof(obj);
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return _assertThisInitialized(self);
-}
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) _setPrototypeOf(subClass, superClass);
-}
-
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-
-
-
-var ReviewList =
+var RestaurantListing =
 /*#__PURE__*/
-function (_Component) {
-  _inherits(ReviewList, _Component);
+function (_Component3) {
+  _inherits(RestaurantListing, _Component3);
 
-  function ReviewList(props) {
-    var _this;
+  function RestaurantListing(props) {
+    var _this3;
 
-    _classCallCheck(this, ReviewList);
+    _classCallCheck(this, RestaurantListing);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(ReviewList).call(this, props));
-    _this.state = {
-      reviews: _this.props.reviews
+    _this3 = _possibleConstructorReturn(this, _getPrototypeOf(RestaurantListing).call(this, props));
+    _this3.state = {
+      restaurants: []
     };
-    return _this;
+    return _this3;
   }
 
-  _createClass(ReviewList, [{
-    key: "getList",
-    value: function getList(reviews) {
-      console.log('calling get list');
-      var review_list = reviews.map(function (review) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Review__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          review: review
+  _createClass(RestaurantListing, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this4 = this;
+
+      console.log("this is a testin from component did mount");
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/admin/restaurants/list').then(function (response) {
+        console.log(response);
+        console.log(_this4.state);
+
+        _this4.setState({
+          restaurants: response.data
         });
       });
-      console.log(review_list);
-      return review_list;
     }
   }, {
     key: "render",
     value: function render() {
-      var reviews = this.state.reviews;
-      console.log(reviews);
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container-fluid"
-      }, this.getList(reviews));
+      console.log(this.state.restaurants);
+      var rows = this.state.restaurants.map(function (item) {
+        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(RestaurantRow, {
+          restaurant: item
+        });
+      });
+      console.log(rows);
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "container"
+      }, rows);
     }
   }]);
 
-  return ReviewList;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+  return RestaurantListing;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (ReviewList);
+react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(RestaurantListing, null), document.getElementById('app'));
 
 /***/ }),
 
-/***/ 2:
-/*!*****************************************!*\
-  !*** multi ./resources/js/react/App.js ***!
-  \*****************************************/
+/***/ 3:
+/*!*******************************************************!*\
+  !*** multi ./resources/js/react/RestaurantListing.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /app/resources/js/react/App.js */"./resources/js/react/App.js");
+module.exports = __webpack_require__(/*! /app/resources/js/react/RestaurantListing.js */"./resources/js/react/RestaurantListing.js");
 
 
 /***/ })

@@ -47,7 +47,7 @@ docker-compose exec app php artisan db:seed --class=RestaurantTableSeeder
 run the following to create a seeder class
 
 ```
-docker-compose app php artisan make:seeder AdminUserSeeder
+docker-compose exec app php artisan make:seeder AdminUserSeeder
 ```
 
 the method ```run``` in this seeder class should look like this:
@@ -69,4 +69,17 @@ docker run --rm -v $(pwd):/app composer dump-autoload
 run seeder to generate your admin user
 ```
 docker-compose app php artisan db:seed --class=AdminUserSeeder
+```
+
+## Compiling assets
+we need to utilize Node.js to install dependencies
+
+run the below to install dependencies using npm
+```
+docker run -it --rm -v $(pwd):/app -w /app node npm install
+```
+
+compile assets using laravel's webpack mix
+```
+docker run -it --rm -v $(pwd):/app -w /app node npm run development
 ```

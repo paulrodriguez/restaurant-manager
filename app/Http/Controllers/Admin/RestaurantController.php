@@ -15,7 +15,7 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        //
+
         return view('layouts.backend.main.restaurant.index');
     }
 
@@ -83,5 +83,11 @@ class RestaurantController extends Controller
     public function destroy(Restaurant $restaurant)
     {
         //
+    }
+    
+    public function getList()
+    {
+        //echo 'test from getList';
+        return Restaurant::all();
     }
 }

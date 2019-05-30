@@ -4,5 +4,6 @@
     "/css/app.css": "/css/app.css",
     "/css/custom.css": "/css/custom.css",
     "/css/backend/app.css": "/css/backend/app.css",
-    "/js/react/App.js": "/js/react/App.js"
+    "/js/react/App.js": "/js/react/App.js",
+    "/js/react/RestaurantListing.js": "/js/react/RestaurantListing.js"
 }

@@ -1,4 +1,7 @@
 @extends('layouts.backend.main.layout_left_sidebar')
 @section('content')
-we will build a list here of all the restaurants using a react module
+<div id="app"></div>
 @endsection
+@push('footer_scripts')
+<script src="{{ mix('js/react/RestaurantListing.js') }}"></script>
+@endpush

@@ -26,9 +26,15 @@ Route::get('/admin/login', 'Admin\LoginController@showLoginForm')->name('admin.l
 Route::get('/admin/logout','Admin\LoginController@logout');
 Route::post('/admin/login','Admin\LoginController@login');
 
+
 // all controllers in Admin, except admin controller
 Route::namespace('Admin')->prefix('admin')->middleware('admin_auth:admin')->group(function() {
+    
+    // create custom routes before using resource
+    Route::get('restaurants/list','RestaurantController@getList');
   Route::resource('restaurants','RestaurantController',['as'=>'admin']);
+  //Route::get('restaurants/list','RestaurantController@getList');
+
   Route::get('dashboard','DashboardController@index')->name('admin.dashboard.index');
 });
 //->where(array('id'=>'\d+'));
