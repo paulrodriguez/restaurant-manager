@@ -26769,17 +26769,27 @@ function (_Component) {
     console.log("creating restaurant row");
     _this = _possibleConstructorReturn(this, _getPrototypeOf(RestaurantRow).call(this, props));
     _this.state = {
-      restaurant: props.restaurant
+      restaurant: props.restaurant,
+      columns: props.columns
     };
     return _this;
   }
 
   _createClass(RestaurantRow, [{
+    key: "getColumns",
+    value: function getColumns() {
+      var _this2 = this;
+
+      return this.state.columns.map(function (column) {
+        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, _this2.state.restaurant[column]);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "row"
-      }, this.state.restaurant.name);
+      }, this.getColumns());
     }
   }]);
 
@@ -26792,16 +26802,32 @@ function (_Component2) {
   _inherits(RestaurantColumns, _Component2);
 
   function RestaurantColumns(props) {
-    var _this2;
+    var _this3;
 
     _classCallCheck(this, RestaurantColumns);
 
-    _this2 = _possibleConstructorReturn(this, _getPrototypeOf(RestaurantColumns).call(this, props));
-    _this2.state = {
-      columns: []
+    _this3 = _possibleConstructorReturn(this, _getPrototypeOf(RestaurantColumns).call(this, props));
+    _this3.state = {
+      columns: props.columns
     };
-    return _this2;
+    return _this3;
   }
+
+  _createClass(RestaurantColumns, [{
+    key: "getColumns",
+    value: function getColumns() {
+      return this.state.columns.map(function (column) {
+        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, column);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "row"
+      }, this.getColumns());
+    }
+  }]);
 
   return RestaurantColumns;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
@@ -26812,45 +26838,57 @@ function (_Component3) {
   _inherits(RestaurantListing, _Component3);
 
   function RestaurantListing(props) {
-    var _this3;
+    var _this4;
 
     _classCallCheck(this, RestaurantListing);
 
-    _this3 = _possibleConstructorReturn(this, _getPrototypeOf(RestaurantListing).call(this, props));
-    _this3.state = {
-      restaurants: []
+    _this4 = _possibleConstructorReturn(this, _getPrototypeOf(RestaurantListing).call(this, props));
+    _this4.state = {
+      restaurants: [],
+      columns: []
     };
-    return _this3;
+    return _this4;
   }
 
   _createClass(RestaurantListing, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var _this4 = this;
+      var _this5 = this;
 
       console.log("this is a testin from component did mount");
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/admin/restaurants/list').then(function (response) {
         console.log(response);
-        console.log(_this4.state);
+        console.log(_this5.state);
 
-        _this4.setState({
+        _this5.setState({
           restaurants: response.data
         });
+      });
+      this.setState({
+        columns: ['name', 'address1', 'city', 'state', 'postal_code']
+      });
+    }
+  }, {
+    key: "getColumns",
+    value: function getColumns() {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(RestaurantColumns, {
+        columns: this.state.columns
       });
     }
   }, {
     key: "render",
     value: function render() {
-      console.log(this.state.restaurants);
+      var _this6 = this;
+
       var rows = this.state.restaurants.map(function (item) {
         return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(RestaurantRow, {
-          restaurant: item
+          restaurant: item,
+          columns: _this6.state.columns
         });
       });
-      console.log(rows);
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "container"
-      }, rows);
+      }, this.getColumns(), rows);
     }
   }]);
 

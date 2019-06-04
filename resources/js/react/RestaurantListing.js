@@ -7,14 +7,21 @@ class RestaurantRow extends Component {
         console.log("creating restaurant row");
         super(props);
         this.state = {
-            restaurant: props.restaurant
+            restaurant: props.restaurant,
+            columns: props.columns
         }
+    }
+    
+    getColumns() {
+        return this.state.columns.map(column=>{
+            return (<div>{this.state.restaurant[column]}</div>); 
+        });
     }
     
     render() {
         return (
             <div className="row">
-            {this.state.restaurant.name}
+            {this.getColumns()}
             </div>
             
         );
@@ -26,8 +33,20 @@ class RestaurantColumns extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            columns: []
+            columns: props.columns
         }
+    }
+    
+    getColumns() {
+        return this.state.columns.map(column=>{
+            return (<div>{column}</div>) 
+        });
+    }
+    render() {
+        return(
+            <div className="row">{this.getColumns()}</div>
+            
+        )
     }
 }
 
@@ -35,7 +54,8 @@ class RestaurantListing extends Component {
     constructor (props) {
       super(props)
       this.state = {
-          restaurants: []
+          restaurants: [],
+          columns: []
       }
     }
 
@@ -46,16 +66,23 @@ class RestaurantListing extends Component {
             console.log(this.state);
             this.setState({restaurants: response.data})
         });
+        
+        this.setState({columns: ['name','address1','city','state','postal_code']})
+    }
+    
+    getColumns() {
+        return (<RestaurantColumns columns={this.state.columns} />)
     }
     
     render() {
-        console.log(this.state.restaurants);
+
         const rows = this.state.restaurants.map((item)=>{
-            return (<RestaurantRow restaurant={item} />)
+            return (<RestaurantRow restaurant={item} columns={this.state.columns} />)
         });
-        console.log(rows);
+        
         return (
             <div className="container">
+            {this.getColumns()}
             {rows}
             </div>
         )

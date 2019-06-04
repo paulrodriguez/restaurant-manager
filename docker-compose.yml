@@ -27,5 +27,11 @@ services:
             MYSQL_USER: app
             MYSQL_PASSWORD: password
             MYSQL_ROOT_PASSWORD: password
+    node:
+        image: node
+        working_dir: /srv/app
+        volumes:
+            - .:/srv/app
+        command: npm install
             
         
