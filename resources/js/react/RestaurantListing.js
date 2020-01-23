@@ -1,66 +1,34 @@
 import axios from 'axios'
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-
-class RestaurantRow extends Component {
-    constructor(props) {
-        console.log("creating restaurant row");
-        super(props);
-        this.state = {
-            restaurant: props.restaurant,
-            columns: props.columns
-        }
-    }
-    
-    getColumns() {
-        return this.state.columns.map(column=>{
-            return (<div>{this.state.restaurant[column]}</div>); 
-        });
-    }
-    
-    render() {
-        return (
-            <div className="row">
-            {this.getColumns()}
-            </div>
-            
-        );
-    }
-    
-}
-
-class RestaurantColumns extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            columns: props.columns
-        }
-    }
-    
-    getColumns() {
-        return this.state.columns.map(column=>{
-            return (<div>{column}</div>) 
-        });
-    }
-    render() {
-        return(
-            <div className="row">{this.getColumns()}</div>
-            
-        )
-    }
-}
+import Listing from '../components/Listing/Listing'
+import 'jquery';
+import 'bootstrap/dist/js/bootstrap';
 
 class RestaurantListing extends Component {
-    constructor (props) {
-      super(props)
-      this.state = {
-          restaurants: [],
-          columns: []
-      }
+    constructor(props) {
+        
+        super(props);
+        let deleteItem = this.deleteItem;
+        let editItem = this.editItem;
+        this.state = {
+            restaurants: [],
+            columns: [],
+            actions: [{'name':'Edit','method':editItem},
+            {'name':'Delete','method':deleteItem}]
+        }
+        
+        
     }
-
+    deleteItem(id) {
+        console.log(id);
+    }
+    editItem(id) {
+        console.log(id);
+    }
     componentDidMount () {
         console.log("this is a testin from component did mount");
+        //TODO: will need to change this url
         axios.get('/admin/restaurants/list').then(response=>{
             console.log(response);
             console.log(this.state);
@@ -70,24 +38,13 @@ class RestaurantListing extends Component {
         this.setState({columns: ['name','address1','city','state','postal_code']})
     }
     
-    getColumns() {
-        return (<RestaurantColumns columns={this.state.columns} />)
-    }
-    
     render() {
-
-        const rows = this.state.restaurants.map((item)=>{
-            return (<RestaurantRow restaurant={item} columns={this.state.columns} />)
-        });
-        
-        return (
-            <div className="container">
-            {this.getColumns()}
-            {rows}
-            </div>
-        )
+        return (<Listing 
+            columns={this.state.columns} 
+            list={this.state.restaurants} 
+            column_count={this.state.columns.length}
+            actions={this.state.actions} />)
     }
-    
 }
 
 ReactDOM.render(<RestaurantListing />, document.getElementById('app'))

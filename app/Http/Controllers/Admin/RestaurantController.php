@@ -49,6 +49,7 @@ class RestaurantController extends Controller
     public function show(Restaurant $restaurant)
     {
         //
+        return view('layouts.backend.main.restaurant.show');
     }
 
     /**
@@ -60,6 +61,7 @@ class RestaurantController extends Controller
     public function edit(Restaurant $restaurant)
     {
         //
+        echo "test";
     }
 
     /**
@@ -83,11 +85,20 @@ class RestaurantController extends Controller
     public function destroy(Restaurant $restaurant)
     {
         //
+        echo $restaurant->id;
     }
-    
+
+    /**
+     * gets list of restaurants along with edit and delete keys
+     *
+     * @return \App\Restaurant
+     */
     public function getList()
     {
-        //echo 'test from getList';
-        return Restaurant::all();
+        return Restaurant::all()->map(function($restaurant) {
+            $restaurant->edit = route('admin.restaurants.show',['restaurant'=>$restaurant]);
+            $restaurant->delete = route('admin.restaurants.destroy',['restaurant'=>$restaurant]);
+            return $restaurant;
+        });
     }
 }

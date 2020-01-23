@@ -29,15 +29,13 @@ Route::post('/admin/login','Admin\LoginController@login');
 
 // all controllers in Admin, except admin controller
 Route::namespace('Admin')->prefix('admin')->middleware('admin_auth:admin')->group(function() {
-    
+
     // create custom routes before using resource
     Route::get('restaurants/list','RestaurantController@getList');
-  Route::resource('restaurants','RestaurantController',['as'=>'admin']);
-  //Route::get('restaurants/list','RestaurantController@getList');
+    Route::resource('restaurants','RestaurantController',['as'=>'admin']);
 
-  Route::get('dashboard','DashboardController@index')->name('admin.dashboard.index');
+    Route::get('dashboard','DashboardController@index')->name('admin.dashboard.index');
 });
-//->where(array('id'=>'\d+'));
 
 Auth::routes();
 
